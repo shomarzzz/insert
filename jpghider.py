@@ -8,7 +8,11 @@ class Hider:
         else:
             self.string = endstring
             self.length = len(endstring)//2
-
+    
+    def appendbyte(self, bytes):
+        with open(self.path, 'ab') as file:
+            file.write(bytes)
+            
     def appendfile(self, name):
         with open(name, 'rb') as f:
             bytes = f.read()
