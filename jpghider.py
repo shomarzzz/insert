@@ -16,8 +16,7 @@ class Hider:
     def appendfile(self, name):
         with open(name, 'rb') as f:
             bytes = f.read()
-        with open(self.path, 'ab') as file:
-            file.write(bytes)
+        self.appendbyte(bytes)
 
     def showoutput(self):
         with open(self.path, 'rb') as file:
